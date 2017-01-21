@@ -5,4 +5,4 @@ func _ready():
 
 func _process(delta):
 	
-	set_pos(Vector2(get_pos().x + 0.67, get_pos().y))
+	set_pos(Vector2(get_pos().x + (40 * delta), get_pos().y))

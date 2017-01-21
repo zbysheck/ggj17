@@ -9,7 +9,6 @@
 
 [node name="Surfer" parent="." instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 0, 27.2003 )
 maxSpeed = 40
 
 [node name="Camera2D" type="Camera2D" parent="Surfer"]
@@ -22,7 +21,7 @@ zoom = Vector2( 1, 1 )
 limit/left = -10000000
 limit/top = -10000000
 limit/right = 10000000
-limit/bottom = 240
+limit/bottom = 220
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
 smoothing/enable = false
