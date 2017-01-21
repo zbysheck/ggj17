@@ -25,35 +25,33 @@ limit/right = 10000000
 limit/bottom = 220
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
-smoothing/enable = false
+smoothing/enable = true
 smoothing/speed = 5.0
 drag_margin/left = 0.2
 drag_margin/top = 0.2
 drag_margin/right = 0.2
 drag_margin/bottom = 0.2
 
-[node name="HUD" type="Control" parent="Surfer"]
+[node name="CanvasLayer" type="CanvasLayer" parent="Surfer/Camera2D"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 40.0
-margin/bottom = 40.0
+layer = 33
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
 
-[node name="ProgressBar" type="ProgressBar" parent="Surfer/HUD"]
+[node name="ProgressBar" type="ProgressBar" parent="Surfer/Camera2D/CanvasLayer"]
 
+anchor/right = 1
+anchor/bottom = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 theme/theme = ExtResource( 3 )
-margin/left = -155.0
-margin/top = -19.0
-margin/right = -30.0
-margin/bottom = -3.0
+margin/left = 6.0
+margin/top = 7.0
+margin/right = 189.0
+margin/bottom = 217.0
 range/min = 0.0
 range/max = 100.0
 range/step = 1.0

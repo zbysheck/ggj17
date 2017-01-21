@@ -8,10 +8,17 @@ var speed = 0;
 export(int) var maxSpeed;
 var isOnTheWave = false;
 
+onready var pasekTurbo = get_node("Camera2D/CanvasLayer/ProgressBar")
+var Turbo = 0;
+var TurboDecay = 5;
+
 func _ready():
+	get_node("/root/GameState").surfer = self;
 	set_process(true)
 
 func _process(delta):
+	Turbo -= TurboDecay
+	pasekTurbo.set_value(Turbo)
 	maxSpeed = 90
 	if(isOnWave() && !Input.is_action_pressed("SURF")):
 		speed += 0.01
@@ -63,3 +70,6 @@ func isOnWave():
 		
 func kill(): 
 	set_pos(initial_pos)
+
+func addTurbo(turboVal):
+	Turbo += turboVal
