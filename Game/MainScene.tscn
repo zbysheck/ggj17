@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://Game/Background/Background.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Surfer/Surfer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Game/GUI/PowerBarTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Assets/BackGround/BGROUND.png" type="Texture" id=4]
 
 [node name="MainScene" type="Node"]
 
@@ -60,5 +61,25 @@ range/value = 30.0
 range/exp_edit = false
 range/rounded = false
 percent/visible = false
+
+[node name="CanvasLayer 2" type="CanvasLayer" parent="Surfer/Camera2D"]
+
+layer = -70
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="TextureFrame" type="TextureFrame" parent="Surfer/Camera2D/CanvasLayer 2"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -196.0
+margin/top = 0.0
+margin/right = 484.0
+margin/bottom = 240.0
+texture = ExtResource( 4 )
+stretch_mode = 0
 
 

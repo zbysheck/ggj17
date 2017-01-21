@@ -25,7 +25,6 @@ func readTileScenes():
 func createSegment(currentSegment):
 	var index = (randi() % endlessRunnerTiles.size())
 	var newSegment = endlessRunnerTiles[index].instance()
-	print(str(index))
 	newSegment.set_frame(currentSegment.get_frame())
 	currentSegment.get_node("..").add_child(newSegment)
 	var segmentPos = currentSegment.get_node("BlockEnd").get_pos()
