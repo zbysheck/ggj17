@@ -15,6 +15,5 @@ func changeToGameScreen():
 	get_tree().change_scene("res://Game/MainScene.tscn")
 func addPoints(points):
 	self.points += points
-	print(str(self.points))
 func resetPoints():
 	points = 0

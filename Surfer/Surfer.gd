@@ -4,9 +4,10 @@ var CurrentDirectionVector
 onready var initial_pos = get_pos()
 var Waves = 0;
 var speed = 0;
+var baseMaxSpeed = 90;
+var maxSpeed = 0;
 var prevX;
 
-export(int) var maxSpeed;
 var isOnTheWave = false;
 
 onready var pasekTurbo = get_node("Camera2D/CanvasLayer/ProgressBar")
@@ -22,7 +23,8 @@ func _process(delta):
 	if(Turbo < 0):
 		Turbo = 0
 	pasekTurbo.set_value(Turbo)
-	maxSpeed = 90
+	maxSpeed = baseMaxSpeed + Turbo
+	print(str(maxSpeed))
 	if(isOnWave() && !Input.is_action_pressed("SURF")):
 		speed += 0.01
 	if(isOnWave() && Input.is_action_pressed("SURF")):
