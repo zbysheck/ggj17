@@ -5,7 +5,4 @@ extends AnimatedSprite
 # var b = "textvar"
 
 func _ready():
-	play("default")
-	set_frame (0)
 	#yield( self, "finished" )
-	play("Loop")
