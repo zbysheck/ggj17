@@ -1,8 +1,10 @@
 extends AnimatedSprite
 
 onready var background = get_node("..")
+
 onready var scene = preload("res://Game/Background/Wave.tscn")
 onready var EndlessRunnerGenerator = get_node("/root/EndlessRunner")
+
 
 func _ready():
 	pass
@@ -17,7 +19,7 @@ func _on_Area2D_body_exit( body ):
 
 func createNextSegment():
 	print("created segment")
-	var newSegment = scene.instance()
+	var newSegment = preload("res://Game/Background/Wave.tscn").instance()
 	newSegment.set_frame(self.get_frame())
 	get_node("..").add_child(newSegment)
 	var segmentPos = get_node("BlockEnd").get_pos()

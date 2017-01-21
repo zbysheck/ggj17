@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 var CurrentDirectionVector
-
+onready var initial_pos = get_pos()
 var Waves = 0;
 
 export(int) var maxSpeed;
@@ -46,3 +46,7 @@ func isOnWave():
 		return true
 	else:
 		return false
+		
+		
+func kill(): 
+	set_pos(initial_pos)
