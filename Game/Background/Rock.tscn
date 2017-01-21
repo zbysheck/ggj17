@@ -36,8 +36,6 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
-[connection signal="area_enter" from="." to="." method="_on_Rock_area_enter"]
-
 [connection signal="body_enter" from="." to="." method="_on_Rock_body_enter"]
 
 
