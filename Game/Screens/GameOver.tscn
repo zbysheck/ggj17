@@ -15,15 +15,14 @@ script/script = ExtResource( 1 )
 
 [node name="tlo" type="AnimatedSprite" parent="."]
 
-transform/pos = Vector2( 163.715, 118.918 )
+transform/pos = Vector2( 171.314, 121.742 )
 frames = SubResource( 1 )
 animation = "default"
 
 [node name="AnimatedSprite" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 162.45, 202.16 )
-frame = 0
-playing = false
+transform/pos = Vector2( 166.072, 207.414 )
+frame = 37
 
 [node name="Hud" type="Control" parent="."]
 

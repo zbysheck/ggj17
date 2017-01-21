@@ -11,9 +11,13 @@
 
 [node name="Surfer" parent="." instance=ExtResource( 2 )]
 
+
+transform/pos = Vector2( 4.19116, 107.174 )
+maxSpeed = 40
+
 [node name="Camera2D" type="Camera2D" parent="Surfer"]
 
-transform/pos = Vector2( 1.6702, 102.913 )
+transform/pos = Vector2( -1.32348, -0.0695724 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -21,7 +25,7 @@ zoom = Vector2( 1, 1 )
 limit/left = -10000000
 limit/top = -10000000
 limit/right = 10000000
-limit/bottom = 220
+limit/bottom = 240
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
 smoothing/enable = true
@@ -33,6 +37,7 @@ drag_margin/bottom = 0.2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Surfer/Camera2D"]
 
+editor/display_folded = true
 layer = 33
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -73,10 +78,12 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+
 margin/left = -196.0
 margin/top = -1.0
 margin/right = 484.0
 margin/bottom = 239.0
+
 texture = ExtResource( 4 )
 stretch_mode = 0
 
