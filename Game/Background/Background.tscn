@@ -18,16 +18,15 @@ texture = ExtResource( 2 )
 
 [node name="Wave" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 131.855, 188.743 )
-transform/scale = Vector2( 1.8241, 1 )
+transform/pos = Vector2( -0.254211, 188.743 )
 
 [node name="CreationPos" type="Position2D" parent="."]
 
-transform/pos = Vector2( 442.606, 174.296 )
+transform/pos = Vector2( 204.446, 180.325 )
 
 [node name="Trigger" type="Position2D" parent="."]
 
-transform/pos = Vector2( -495.832, 189.962 )
+transform/pos = Vector2( -418.958, 177.903 )
 transform/scale = Vector2( 1.2947, 1 )
 
 

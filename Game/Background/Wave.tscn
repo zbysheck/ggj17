@@ -1,11 +1,74 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://Assets/BackGround/Wave.png" type="Texture" id=1]
 [ext_resource path="res://Game/Background/Wave.gd" type="Script" id=2]
 
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 160.518, 60.7683 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 160.326, 20.7729 )
+
 [node name="Wave" type="Sprite"]
 
+transform/pos = Vector2( 160.457, 1.62901 )
 texture = ExtResource( 1 )
 script/script = ExtResource( 2 )
+__meta__ = { "_edit_group_":true }
+
+[node name="WaveArea" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_point = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaveArea"]
+
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="UnderWaveArea" type="StaticBody2D" parent="."]
+
+transform/pos = Vector2( 0, 99.5131 )
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 2.15672, -66.3295 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UnderWaveArea"]
+
+transform/pos = Vector2( 2.15672, -66.3295 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="BlockBegin" type="Position2D" parent="."]
+
+transform/pos = Vector2( -160.457, -0.814499 )
+
+[node name="BlockEnd" type="Position2D" parent="."]
+
+transform/pos = Vector2( 160.457, -2.44351 )
+
+[connection signal="body_enter" from="WaveArea" to="." method="_on_Area2D_body_enter"]
+
+[connection signal="body_exit" from="WaveArea" to="." method="_on_Area2D_body_exit"]
 
 

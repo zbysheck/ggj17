@@ -9,11 +9,20 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	var pos = get_pos()
-	set_pos(Vector2(pos.x - 20, pos.y))
-	pos = get_pos()
-	if(pos.x <= creationTrigger.get_pos().x):
-		var newWave = scene.instance()
-		background.add_child(newWave)
-		newWave.set_pos(Vector2(creationPos.get_pos().x, pos.y))
-		free()
+	pass
+
+func _on_Area2D_body_enter( body ):
+	if(body.get_name() == "Surfer"):
+		body.enterWave()
+
+
+func _on_Area2D_body_exit( body ):
+	if(body.get_name() == "Surfer"):
+		body.leaveWave()
+
+func createNextSegment():
+	var newSegment = scene.instance()
+	var segmentPos = newSegment.get_pos()
+	var segmentBegin = newSegment.get_node("BlockBegin")
+	
+	
