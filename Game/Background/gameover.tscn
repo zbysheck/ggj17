@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://Assets/BackGround/BGROUND.png" type="Texture" id=1]
+[ext_resource path="res://Game/Background/SurferOut.tscn" type="PackedScene" id=2]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -8,7 +9,15 @@ animations = [ { "frames":[ ExtResource( 1 ) ], "loop":true, "name":"default", "
 
 [node name="AnimatedSprite" type="AnimatedSprite"]
 
+transform/pos = Vector2( 174.898, 118.758 )
+transform/scale = Vector2( 1, 1.05458 )
 frames = SubResource( 1 )
 animation = "default"
+
+[node name="AnimatedSprite" parent="." instance=ExtResource( 2 )]
+
+process/pause_mode = 1
+transform/pos = Vector2( -13.2684, 86.2446 )
+frame = 4
 
 
