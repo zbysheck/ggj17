@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://Surfer/Surfer.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Surfer/Surfer.png" type="Texture" id=2]
@@ -6,23 +6,23 @@
 [ext_resource path="res://Surfer/medium-forward.png" type="Texture" id=4]
 [ext_resource path="res://Surfer/fast-forward.png" type="Texture" id=5]
 [ext_resource path="res://Surfer/slow-forward.png" type="Texture" id=6]
-[ext_resource path="res://Surfer/45-up.png" type="Texture" id=7]
-[ext_resource path="res://Surfer/90-down2.png" type="Texture" id=8]
+[ext_resource path="res://Surfer/90-down2.png" type="Texture" id=7]
+[ext_resource path="res://Surfer/45-up.png" type="Texture" id=8]
 [ext_resource path="res://Surfer/epic-jump.png" type="Texture" id=9]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 11.7728, 10.5298 )
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 
-animations = [ { "frames":[ ExtResource( 3 ) ], "loop":true, "name":"45-down", "speed":5.0 }, { "frames":[ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ], "loop":true, "name":"forward", "speed":5.0 }, { "frames":[ ExtResource( 7 ) ], "loop":true, "name":"45-up", "speed":5.0 }, { "frames":[  ], "loop":true, "name":"90-up", "speed":5.0 }, { "frames":[ ExtResource( 8 ) ], "loop":false, "name":"90-down", "speed":5.0 }, { "frames":[ ExtResource( 9 ) ], "loop":true, "name":"jump", "speed":5.0 } ]
+animations = [ { "frames":[ ExtResource( 3 ) ], "loop":true, "name":"45-down", "speed":5.0 }, { "frames":[ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ], "loop":true, "name":"forward", "speed":5.0 }, { "frames":[ ExtResource( 7 ) ], "loop":false, "name":"90-down", "speed":5.0 }, { "frames":[ ExtResource( 8 ) ], "loop":true, "name":"45-up", "speed":5.0 }, { "frames":[ ExtResource( 9 ) ], "loop":true, "name":"jump", "speed":5.0 }, { "frames":[  ], "loop":true, "name":"90-up", "speed":5.0 } ]
 
 [node name="Surfer" type="RigidBody2D"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -2.89872 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -52,13 +52,15 @@ texture = ExtResource( 2 )
 
 [node name="Movement" type="AnimatedSprite" parent="."]
 
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "90-down"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 transform/pos = Vector2( 0, -2.89872 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
+
+
