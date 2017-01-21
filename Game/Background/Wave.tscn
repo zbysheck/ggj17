@@ -52,7 +52,7 @@ extents = Vector2( 65.4238, 20.7729 )
 transform/pos = Vector2( 120, 0 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 7
+frame = 17
 playing = true
 script/script = ExtResource( 32 )
 
@@ -107,8 +107,8 @@ transform/pos = Vector2( 60, 0 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
-transform/pos = Vector2( -2.78417, 33.2958 )
-transform/scale = Vector2( 0.575244, 1 )
+transform/pos = Vector2( 7.0441, -118.39 )
+transform/scale = Vector2( 2.49521, 4.54123 )
 rect = Rect2( -150, 0, 320, 20 )
 
 [connection signal="body_enter" from="WaveArea" to="." method="_on_Area2D_body_enter"]
