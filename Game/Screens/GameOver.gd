@@ -7,6 +7,6 @@ extends Node2D
 func _ready():
 	set_process_input(true)
 
-func _input(event)
+func _input(event):
 	if(event.is_action_pressed("SURF") && !event.is_echo()):
 		get_node("/root/GameState").changeToMainScreen()
