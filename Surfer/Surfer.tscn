@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://Surfer/Surfer.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Surfer/Untitled.png" type="Texture" id=2]
 
 [node name="Surfer" type="RigidBody2D"]
 
@@ -9,9 +10,9 @@ collision/layers = 1
 collision/mask = 1
 mode = 0
 mass = 1.0
-friction = 1.0
+friction = 0.0
 bounce = 0.0
-gravity_scale = 1.0
+gravity_scale = 0.75
 custom_integrator = false
 continuous_cd = 0
 contacts_reported = 0
@@ -23,5 +24,10 @@ velocity/angular = 0.0
 damp_override/linear = -1.0
 damp_override/angular = -1.0
 script/script = ExtResource( 1 )
+maxSpeed = null
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
 
 
