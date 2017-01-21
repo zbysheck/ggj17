@@ -9,6 +9,8 @@
 
 [node name="Surfer" parent="." instance=ExtResource( 2 )]
 
+maxSpeed = 40
+
 [node name="Camera2D" type="Camera2D" parent="Surfer"]
 
 transform/pos = Vector2( 1.6702, 102.913 )
