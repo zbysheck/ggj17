@@ -23,13 +23,13 @@ func _process(delta):
 		
 	var P1 = get_node("Movement")	
 		
-	if (-5 < velocity_y < 5):	
+	if (-10 < velocity_y && velocity_y < 1):	
 		P1.play("forward")	
-	elif (velocity_y < -5):	
-		print(str(velocity))
+	elif (velocity_y > 10):	
+		print(str(velocity_y))
 		P1.play("45-down")
-	elif (velocity_y > 5):
-		print(str(velocity))
+	elif (velocity_y < -10):
+		print(str(velocity_y))
 		P1.play("45-up")
-	
+	print(str(velocity_y))
 	
