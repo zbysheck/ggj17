@@ -1,4 +1,4 @@
-extends Sprite
+extends AnimatedSprite
 
 onready var creationPos = get_node("../CreationPos")
 onready var creationTrigger = get_node("../Trigger")
