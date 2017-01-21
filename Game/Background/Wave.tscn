@@ -52,7 +52,7 @@ extents = Vector2( 65.4238, 20.7729 )
 transform/pos = Vector2( 120, 0 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 27
+frame = 7
 playing = true
 script/script = ExtResource( 32 )
 
@@ -71,7 +71,6 @@ angular_damp = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WaveArea"]
 
 transform/pos = Vector2( 0, -6.91299 )
-transform/scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
@@ -81,7 +80,7 @@ _update_shape_index = 0
 transform/pos = Vector2( 0, 99.5131 )
 input/pickable = true
 shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 2.15672, -66.3295 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 1.20541, -41.3577 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -92,7 +91,7 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UnderWaveArea"]
 
-transform/pos = Vector2( 2.15672, -66.3295 )
+transform/pos = Vector2( 1.20541, -41.3577 )
 shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
@@ -108,8 +107,8 @@ transform/pos = Vector2( 60, 0 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
-transform/pos = Vector2( -0.277914, 0 )
-transform/scale = Vector2( 0.397067, 1 )
+transform/pos = Vector2( -2.78417, 33.2958 )
+transform/scale = Vector2( 0.575244, 1 )
 rect = Rect2( -150, 0, 320, 20 )
 
 [connection signal="body_enter" from="WaveArea" to="." method="_on_Area2D_body_enter"]
