@@ -22,14 +22,17 @@ func _process(delta):
 		set_linear_velocity(Vector2(maxSpeed, get_linear_velocity().y))
 		
 	var P1 = get_node("Movement")	
-		
-	if (-10 < velocity_y && velocity_y < 1):	
-		P1.play("forward")	
-	elif (velocity_y > 10):	
-		print(str(velocity_y))
-		P1.play("45-down")
-	elif (velocity_y < -10):
-		print(str(velocity_y))
-		P1.play("45-up")
-	print(str(velocity_y))
+	var P1position = P1.get_global_pos()
+	
+	if (P1position.y < 120 ):
+		P1.play("jump")
+	elif (P1position.y > 120 ):
+		if (-10 < velocity_y && velocity_y < 1):
+			P1.play("forward")
+		elif (velocity_y > 10):	
+			P1.play("45-down")
+		elif (velocity_y < -10):
+			P1.play("45-up")
+	
+	
 	
