@@ -8,11 +8,11 @@ func _ready():
 
 func _on_Area2D_body_enter( body ):
 	if(body.get_name() == "Surfer"):
-		body.enterWave()
+		body.enterWave(self)
 
 func _on_Area2D_body_exit( body ):
 	if(body.get_name() == "Surfer"):
-		body.leaveWave()
+		body.leaveWave(self)
 
 func createNextSegment():
 	print("created segment")
