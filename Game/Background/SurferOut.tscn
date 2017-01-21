@@ -26,7 +26,7 @@ animations = [ { "frames":[ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 )
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 14
+frame = 3
 playing = true
 
 
