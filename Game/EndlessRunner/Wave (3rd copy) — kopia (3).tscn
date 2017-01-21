@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=1]
+[gd_scene load_steps=36 format=1]
 
 [ext_resource path="res://Assets/BackGround/Wave_back/WAVE_back_00000.png" type="Texture" id=1]
 [ext_resource path="res://Assets/BackGround/Wave_back/WAVE_back_00001.png" type="Texture" id=2]
@@ -32,7 +32,6 @@
 [ext_resource path="res://Assets/BackGround/Wave_back/WAVE_back_00029.png" type="Texture" id=30]
 [ext_resource path="res://Assets/BackGround/Wave_back/WAVE_back_00030.png" type="Texture" id=31]
 [ext_resource path="res://Game/Background/Wave.gd" type="Script" id=32]
-[ext_resource path="res://Game/Background/Rock.tscn" type="PackedScene" id=33]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -53,7 +52,7 @@ extents = Vector2( 65.4238, 20.7729 )
 transform/pos = Vector2( 120, 0 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 14
+frame = 28
 playing = true
 script/script = ExtResource( 32 )
 
@@ -108,18 +107,13 @@ transform/pos = Vector2( 60, 0 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
-transform/pos = Vector2( -3.44759, -171.274 )
-transform/scale = Vector2( 0.575244, 6.21967 )
+transform/pos = Vector2( -3.44759, -155.623 )
+transform/scale = Vector2( 0.575244, 5.43709 )
 rect = Rect2( -150, 0, 320, 20 )
-
-[node name="Rock" parent="." instance=ExtResource( 33 )]
-
-transform/pos = Vector2( 0.133675, 31.273 )
-z/z = 1
 
 [node name="Particles2D" type="Particles2D" parent="."]
 
-transform/pos = Vector2( -57.8138, -47.8861 )
+transform/pos = Vector2( 5.56102, -47.666 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0
@@ -141,7 +135,7 @@ params/anim_initial_pos = 0.0
 
 [node name="Particles2D1" type="Particles2D" parent="."]
 
-transform/pos = Vector2( -46.7182, -47.8861 )
+transform/pos = Vector2( 52.8297, -48.4604 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0
@@ -163,7 +157,7 @@ params/anim_initial_pos = 0.0
 
 [node name="Particles2D2" type="Particles2D" parent="."]
 
-transform/pos = Vector2( -35.3306, -47.8861 )
+transform/pos = Vector2( -38.1328, -48.0632 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0
@@ -185,7 +179,7 @@ params/anim_initial_pos = 0.0
 
 [node name="Particles2D3" type="Particles2D" parent="."]
 
-transform/pos = Vector2( -24.527, -47.5942 )
+transform/pos = Vector2( -14.8258, -48.301 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0
@@ -207,7 +201,7 @@ params/anim_initial_pos = 0.0
 
 [node name="Particles2D4" type="Particles2D" parent="."]
 
-transform/pos = Vector2( -11.6795, -47.5942 )
+transform/pos = Vector2( 30.5991, -48.301 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0
@@ -229,7 +223,7 @@ params/anim_initial_pos = 0.0
 
 [node name="Particles2D5" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 1.45998, -47.5942 )
+transform/pos = Vector2( 43.6795, -48.5388 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0
@@ -251,7 +245,7 @@ params/anim_initial_pos = 0.0
 
 [node name="Particles2D6" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 16.0594, -47.8861 )
+transform/pos = Vector2( 19.4212, -48.0632 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0
@@ -273,7 +267,7 @@ params/anim_initial_pos = 0.0
 
 [node name="Particles2D7" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 28.9069, -47.5942 )
+transform/pos = Vector2( -4.1236, -48.301 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0
@@ -295,7 +289,7 @@ params/anim_initial_pos = 0.0
 
 [node name="Particles2D8" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 42.3384, -47.8861 )
+transform/pos = Vector2( -26.955, -48.7767 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0
@@ -317,7 +311,7 @@ params/anim_initial_pos = 0.0
 
 [node name="Particles2D9" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 53.434, -47.5942 )
+transform/pos = Vector2( -50.9755, -48.301 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0
@@ -339,7 +333,7 @@ params/anim_initial_pos = 0.0
 
 [node name="Particles2D10" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 64.5295, -47.5942 )
+transform/pos = Vector2( 62.7057, -48.301 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0

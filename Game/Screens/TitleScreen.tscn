@@ -141,7 +141,7 @@ script/script = ExtResource( 1 )
 transform/pos = Vector2( 160, 120 )
 frames = SubResource( 1 )
 animation = "TitleScreen"
-frame = 31
+frame = 124
 playing = true
 
 

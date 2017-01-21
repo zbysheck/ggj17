@@ -43,7 +43,7 @@ func _process(delta):
 		set_linear_velocity(Vector2(maxSpeed, get_linear_velocity().y))
 	if(velocity < 20):
 		set_linear_velocity(Vector2(20, get_linear_velocity().y))
-	if(velocity_y > 1250):
+	if(velocity_y > 250):
 		set_linear_velocity(Vector2(velocity, 250))
 	if(isOnWave() && velocity_y > 60):
 		set_linear_velocity(Vector2(velocity, 60))
@@ -62,11 +62,11 @@ func _process(delta):
 			P1.play("90-up")
 		
 	elif (isOnWave()):
-		if (-10 < velocity_y && velocity_y < 1):
+		if (-30 < velocity_y && velocity_y < 30):
 			P1.play("forward")
-		elif (velocity_y > 10):	
+		elif (velocity_y > 30):	
 			P1.play("45-down")
-		elif (velocity_y < -10):
+		elif (velocity_y < -30):
 			P1.play("45-up")
 	
 	updatePoints(delta)
