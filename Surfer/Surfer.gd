@@ -34,9 +34,8 @@ func _process(delta):
 			P1.play("45-down")
 		elif (velocity_y < -10):
 			P1.play("45-up")
-	
 
 func enterWave():
-	pass
+	isOnTheWave = true
 func leaveWave():
-	pass
+	isOnTheWave = false

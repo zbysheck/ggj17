@@ -13,12 +13,12 @@ func _process(delta):
 
 func _on_Area2D_body_enter( body ):
 	if(body.get_name() == "Surfer"):
-		print("Surfer on the wave")
+		body.enterWave()
 
 
 func _on_Area2D_body_exit( body ):
 	if(body.get_name() == "Surfer"):
-		print("Surfer left the wave")
+		body.leaveWave()
 
 func createNextSegment():
 	var newSegment = scene.instance()
