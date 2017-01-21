@@ -16,7 +16,8 @@ animation = "default"
 
 [node name="AnimatedSprite" parent="." instance=ExtResource( 2 )]
 
+process/pause_mode = 1
 transform/pos = Vector2( -13.2684, 86.2446 )
-frame = 5
+frame = 4
 
 
