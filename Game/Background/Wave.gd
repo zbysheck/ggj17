@@ -1,28 +1,31 @@
-extends Sprite
+extends AnimatedSprite
 
-onready var creationPos = get_node("../CreationPos")
-onready var creationTrigger = get_node("../Trigger")
 onready var background = get_node("..")
 onready var scene = preload("res://Game/Background/Wave.tscn")
 
 func _ready():
-	set_process(true)
-
-func _process(delta):
 	pass
 
 func _on_Area2D_body_enter( body ):
 	if(body.get_name() == "Surfer"):
-		body.enterWave()
-
+		body.enterWave(self)
 
 func _on_Area2D_body_exit( body ):
 	if(body.get_name() == "Surfer"):
-		body.leaveWave()
+		body.leaveWave(self)
 
 func createNextSegment():
+	print("created segment")
 	var newSegment = scene.instance()
-	var segmentPos = newSegment.get_pos()
-	var segmentBegin = newSegment.get_node("BlockBegin")
-	
-	
+	newSegment.set_frame(self.get_frame())
+	get_node("..").add_child(newSegment)
+	var segmentPos = get_node("BlockEnd").get_pos()
+	var segmentBegin = newSegment.get_node("BlockBegin").get_pos()
+	var xPos = segmentPos.x - segmentBegin.x
+	newSegment.set_pos(Vector2(xPos + get_pos().x, get_pos().y))
+
+func _on_VisibilityNotifier2D_exit_screen():
+	queue_free()
+
+func _on_VisibilityNotifier2D_enter_screen():
+	createNextSegment()
