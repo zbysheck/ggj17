@@ -51,6 +51,7 @@ maxSpeed = 25
 
 [node name="Particles2D" type="Particles2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( -4.12948, 6.21461 )
 config/amount = 320
 config/lifetime = 0.900853
