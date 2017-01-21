@@ -111,7 +111,6 @@ drag_margin/bottom = 0.2
 visibility/visible = false
 frames = SubResource( 1 )
 animation = "Front"
-frame = 6
 playing = true
 
 [node name="Fala" type="AnimatedSprite" parent="."]
@@ -121,7 +120,7 @@ transform/pos = Vector2( 70.1397, 172.378 )
 transform/scale = Vector2( 1.56733, 1 )
 frames = SubResource( 2 )
 animation = "Back"
-frame = 6
+frame = 9
 playing = true
 
 [node name="Fala_zalamanie" type="AnimatedSprite" parent="."]
@@ -130,7 +129,7 @@ visibility/visible = false
 transform/pos = Vector2( 12.6349, 169.671 )
 frames = SubResource( 3 )
 animation = "default"
-frame = 8
+frame = 15
 playing = true
 
 

@@ -17,6 +17,7 @@ func _on_Area2D_body_exit( body ):
 func createNextSegment():
 	print("created segment")
 	var newSegment = scene.instance()
+	newSegment.set_frame(self.get_frame())
 	get_node("..").add_child(newSegment)
 	var segmentPos = get_node("BlockEnd").get_pos()
 	var segmentBegin = newSegment.get_node("BlockBegin").get_pos()
