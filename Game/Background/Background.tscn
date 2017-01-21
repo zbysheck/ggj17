@@ -20,7 +20,7 @@ texture = ExtResource( 2 )
 [node name="Wave" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( -59.14, 190.707 )
-frame = 22
+frame = 7
 
 [node name="Fala" parent="." instance=ExtResource( 4 )]
 
