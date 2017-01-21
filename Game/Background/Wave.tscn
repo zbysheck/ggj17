@@ -45,22 +45,28 @@ extents = Vector2( 60.0651, 60.7683 )
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 160.326, 20.7729 )
+extents = Vector2( 159.141, 20.7729 )
 
 [node name="Wave" type="AnimatedSprite"]
 
+<<<<<<< HEAD
 transform/pos = Vector2( 159.663, 0.834584 )
 frames = SubResource( 1 )
 animation = "default"
 script/script = ExtResource( 32 )
 __meta__ = { "_edit_group_":true }
+=======
+transform/pos = Vector2( 160.457, 1.62901 )
+texture = ExtResource( 1 )
+script/script = ExtResource( 2 )
+>>>>>>> refs/remotes/origin/EndlessRunner
 
 [node name="WaveArea" type="Area2D" parent="."]
 
 input/pickable = true
 shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
+shapes/0/trigger = true
 gravity_point = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -69,16 +75,26 @@ angular_damp = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WaveArea"]
 
+<<<<<<< HEAD
 shape = SubResource( 2 )
 trigger = false
+=======
+shape = SubResource( 1 )
+trigger = true
+>>>>>>> refs/remotes/origin/EndlessRunner
 _update_shape_index = 0
 
 [node name="UnderWaveArea" type="StaticBody2D" parent="."]
 
 transform/pos = Vector2( 0, 99.5131 )
 input/pickable = true
+<<<<<<< HEAD
 shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 2.15672, -66.3295 )
+=======
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -0.496921, -65.6661 )
+>>>>>>> refs/remotes/origin/EndlessRunner
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -89,21 +105,38 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UnderWaveArea"]
 
+<<<<<<< HEAD
 transform/pos = Vector2( 2.15672, -66.3295 )
 shape = SubResource( 3 )
+=======
+transform/pos = Vector2( -0.496921, -65.6661 )
+shape = SubResource( 2 )
+>>>>>>> refs/remotes/origin/EndlessRunner
 trigger = false
 _update_shape_index = 0
 
 [node name="BlockBegin" type="Position2D" parent="."]
 
+<<<<<<< HEAD
 transform/pos = Vector2( -80.457, -0.814499 )
+=======
+transform/pos = Vector2( -159.13, -0.814499 )
+>>>>>>> refs/remotes/origin/EndlessRunner
 
 [node name="BlockEnd" type="Position2D" parent="."]
 
 transform/pos = Vector2( 160.457, -2.44351 )
 
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+rect = Rect2( -150, 0, 320, 20 )
+
 [connection signal="body_enter" from="WaveArea" to="." method="_on_Area2D_body_enter"]
 
 [connection signal="body_exit" from="WaveArea" to="." method="_on_Area2D_body_exit"]
+
+[connection signal="enter_screen" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_enter_screen"]
+
+[connection signal="exit_screen" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_exit_screen"]
 
 
