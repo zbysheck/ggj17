@@ -50,7 +50,15 @@ func _process(delta):
 	var P1position = P1.get_global_pos()
 	
 	if (!isOnWave()):
-		P1.play("jump")
+		if (Input.is_action_pressed("SURF")):
+				P1.play("jump")
+		elif (velocity_y < 85 && velocity_y > -85):
+			P1.play("Peek")
+		elif (velocity_y > 85):	
+			P1.play("90-down")
+		elif (velocity_y < -85):
+			P1.play("90-up")
+		
 	elif (isOnWave()):
 		if (-10 < velocity_y && velocity_y < 1):
 			P1.play("forward")
