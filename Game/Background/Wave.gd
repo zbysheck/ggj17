@@ -1,7 +1,12 @@
 extends AnimatedSprite
 
 onready var background = get_node("..")
+<<<<<<< HEAD
 
+=======
+onready var scene = preload("res://Game/Background/Wave.tscn")
+onready var EndlessRunnerGenerator = get_node("/root/EndlessRunner")
+>>>>>>> refs/remotes/origin/master
 
 func _ready():
 	pass
@@ -28,4 +33,4 @@ func _on_VisibilityNotifier2D_exit_screen():
 	queue_free()
 
 func _on_VisibilityNotifier2D_enter_screen():
-	createNextSegment()
+	EndlessRunnerGenerator.createSegment(self)
