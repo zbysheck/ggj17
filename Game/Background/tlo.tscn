@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://Assets/BackGround/BGROUND.png" type="Texture" id=1]
+[ext_resource path="res://Game/Background/Tlo.gd" type="Script" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ { "frames":[ ExtResource( 1 ) ], "loop":true, "name":"default", "speed":5.0 } ]
+
+[node name="AnimatedSprite" type="AnimatedSprite"]
+
+frames = SubResource( 1 )
+animation = "default"
+script/script = ExtResource( 2 )
+
+[node name="BlockBegin1" type="Position2D" parent="."]
+
+transform/pos = Vector2( -340.681, 0 )
+
+[node name="BlockEnd1" type="Position2D" parent="."]
+
+transform/pos = Vector2( 339.484, 0 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+transform/pos = Vector2( -2.1687, 0.553703 )
+transform/scale = Vector2( 42.15, 7.15537 )
+rect = Rect2( -10, -10, 20, 20 )
+
+

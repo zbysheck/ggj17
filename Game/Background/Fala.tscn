@@ -122,6 +122,7 @@ transform/rot = -90.0
 transform/scale = Vector2( 0.653622, 1.75571 )
 frames = SubResource( 3 )
 animation = "default"
+frame = 6
 playing = true
 
 
