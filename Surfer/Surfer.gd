@@ -3,12 +3,13 @@ extends RigidBody2D
 var CurrentDirectionVector
 
 export(int) var maxSpeed;
+var isOnTheWave = false;
 
 func _ready():
 	set_process(true)
 
 func _process(delta):
-	if(Input.is_action_pressed("SURF")):
+	if(Input.is_action_pressed("SURF") && isOnTheWave):
 		CurrentDirectionVector = Vector2(1, -3)
 		set_gravity_scale(0.05)
 		
@@ -29,4 +30,8 @@ func _process(delta):
 		P1.play("45-down")
 	elif (velocity_y < -10):
 		P1.play("45-up")
-	
+
+func enterWave():
+	pass
+func leaveWave():
+	pass
