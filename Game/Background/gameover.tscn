@@ -18,6 +18,6 @@ animation = "default"
 
 process/pause_mode = 1
 transform/pos = Vector2( -13.2684, 86.2446 )
-frame = 4
+frame = 2
 
 
