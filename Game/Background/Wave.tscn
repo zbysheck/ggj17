@@ -24,7 +24,7 @@ script/script = ExtResource( 2 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
+shapes/0/trigger = true
 gravity_point = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -34,7 +34,7 @@ angular_damp = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WaveArea"]
 
 shape = SubResource( 1 )
-trigger = false
+trigger = true
 _update_shape_index = 0
 
 [node name="UnderWaveArea" type="StaticBody2D" parent="."]
@@ -60,7 +60,7 @@ _update_shape_index = 0
 
 [node name="BlockBegin" type="Position2D" parent="."]
 
-transform/pos = Vector2( -160.457, -0.814499 )
+transform/pos = Vector2( -159.13, -0.814499 )
 
 [node name="BlockEnd" type="Position2D" parent="."]
 

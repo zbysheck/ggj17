@@ -1,7 +1,5 @@
 extends Sprite
 
-onready var creationPos = get_node("../CreationPos")
-onready var creationTrigger = get_node("../Trigger")
 onready var background = get_node("..")
 onready var scene = preload("res://Game/Background/Wave.tscn")
 
@@ -23,7 +21,7 @@ func createNextSegment():
 	var segmentPos = get_node("BlockEnd").get_pos()
 	var segmentBegin = newSegment.get_node("BlockBegin").get_pos()
 	var xPos = segmentPos.x - segmentBegin.x
-	newSegment.set_global_pos(segmentPos)
+	newSegment.set_pos(Vector2(xPos + get_pos().x, get_pos().y))
 
 func _on_VisibilityNotifier2D_exit_screen():
 	queue_free()
