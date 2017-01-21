@@ -26,10 +26,7 @@ func _process(delta):
 	if (-10 < velocity_y && velocity_y < 1):	
 		P1.play("forward")	
 	elif (velocity_y > 10):	
-		print(str(velocity_y))
 		P1.play("45-down")
 	elif (velocity_y < -10):
-		print(str(velocity_y))
 		P1.play("45-up")
-	print(str(velocity_y))
 	
