@@ -1,4 +1,7 @@
-[gd_resource type="Theme" load_steps=3 format=1]
+[gd_resource type="Theme" load_steps=5 format=1]
+
+[ext_resource path="res://Assets/GUI/BAR_Frame.png" type="Texture" id=1]
+[ext_resource path="res://Assets/GUI/BAR_Pasek.png" type="Texture" id=2]
 
 [sub_resource type="StyleBoxTexture" id=1]
 
@@ -6,6 +9,7 @@ content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
+texture = ExtResource( 1 )
 margin/left = 0.0
 margin/right = 0.0
 margin/top = 0.0
@@ -16,18 +20,22 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxTexture" id=2]
 
-content_margin/left = -1.0
+content_margin/left = 35.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-bg_color = Color( 0.851562, 0.139709, 0.807072, 1 )
-light_color = Color( 0.847656, 0.119202, 0.119202, 1 )
-dark_color = Color( 0.992188, 0, 0, 1 )
-border_size = 0
-border_blend = true
-draw_bg = true
+texture = ExtResource( 2 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
 
 [resource]
 
