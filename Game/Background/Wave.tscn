@@ -52,7 +52,7 @@ extents = Vector2( 65.4238, 20.7729 )
 transform/pos = Vector2( 120, 0 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 17
+frame = 19
 playing = true
 script/script = ExtResource( 32 )
 

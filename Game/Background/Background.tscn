@@ -1,21 +1,15 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=5 format=1]
 
-[ext_resource path="res://Assets/BackGround/BGROUND.png" type="Texture" id=1]
+[ext_resource path="res://Game/Background/tlo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/BackGround/Ground.png" type="Texture" id=2]
 [ext_resource path="res://Game/Background/Wave.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Game/Background/Fala.tscn" type="PackedScene" id=4]
 
-[sub_resource type="SpriteFrames" id=1]
-
-animations = [ { "frames":[ ExtResource( 1 ) ], "loop":true, "name":"default", "speed":5.0 } ]
-
 [node name="Node" type="Node2D"]
 
-[node name="Sky" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 172.49, 26.4481 )
-frames = SubResource( 1 )
-animation = "default"
+transform/pos = Vector2( 220.917, 33.6105 )
 
 [node name="Ground" type="Sprite" parent="."]
 
@@ -26,7 +20,7 @@ texture = ExtResource( 2 )
 [node name="Wave" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( -59.14, 190.707 )
-frame = 10
+frame = 7
 
 [node name="Fala" parent="." instance=ExtResource( 4 )]
 
