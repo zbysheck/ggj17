@@ -4,8 +4,10 @@ var CurrentDirectionVector
 onready var initial_pos = get_pos()
 var Waves = 0;
 var speed = 0;
+var baseMaxSpeed = 90;
+var maxSpeed = 0;
+var prevX;
 
-export(int) var maxSpeed;
 var isOnTheWave = false;
 
 onready var pasekTurbo = get_node("Camera2D/CanvasLayer/ProgressBar")
@@ -21,7 +23,8 @@ func _process(delta):
 	if(Turbo < 0):
 		Turbo = 0
 	pasekTurbo.set_value(Turbo)
-	maxSpeed = 90
+	maxSpeed = baseMaxSpeed + Turbo
+	print(str(maxSpeed))
 	if(isOnWave() && !Input.is_action_pressed("SURF")):
 		speed += 0.01
 	if(isOnWave() && Input.is_action_pressed("SURF")):
@@ -40,7 +43,6 @@ func _process(delta):
 		set_linear_velocity(Vector2(maxSpeed, get_linear_velocity().y))
 	if(velocity < 20):
 		set_linear_velocity(Vector2(20, get_linear_velocity().y))
-	print(velocity)
 	if(velocity_y > 1250):
 		set_linear_velocity(Vector2(velocity, 250))
 	if(isOnWave() && velocity_y > 60):
@@ -66,6 +68,8 @@ func _process(delta):
 			P1.play("45-down")
 		elif (velocity_y < -10):
 			P1.play("45-up")
+	
+	updatePoints(delta)
 
 func enterWave(wave):
 	Waves = Waves + 1
@@ -83,3 +87,10 @@ func kill():
 
 func addTurbo(turboVal):
 	Turbo += turboVal
+
+func updatePoints(delta):
+	if(prevX == null):
+		prevX = get_pos().x
+	else:
+		var points = delta * get_linear_velocity().x * 1/10
+		get_node("/root/GameState").addPoints(points)
