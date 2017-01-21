@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://Surfer/Surfer.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Surfer/Untitled.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Surfer/Surfer.png" type="Texture" id=2]
 
 [node name="Surfer" type="RigidBody2D"]
 
@@ -24,7 +24,7 @@ velocity/angular = 0.0
 damp_override/linear = -1.0
 damp_override/angular = -1.0
 script/script = ExtResource( 1 )
-maxSpeed = null
+maxSpeed = 25
 
 [node name="Sprite" type="Sprite" parent="."]
 
