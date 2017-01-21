@@ -10,6 +10,7 @@ func rockHit():
 	get_tree().change_scene("res://Game/Screens/GameOver.tscn")
 func changeToMainScreen():
 	get_tree().change_scene("res://Game/Screens/TitleScreen.tscn")
+	resetPoints()
 func changeToGameScreen():
 	get_tree().change_scene("res://Game/MainScene.tscn")
 func addPoints(points):

@@ -90,5 +90,5 @@ func updatePoints(delta):
 	if(prevX == null):
 		prevX = get_pos().x
 	else:
-		var points = (get_pos().x - prevX) * delta * get_linear_velocity().x * 1/10
+		var points = delta * get_linear_velocity().x * 1/10
 		get_node("/root/GameState").addPoints(points)
