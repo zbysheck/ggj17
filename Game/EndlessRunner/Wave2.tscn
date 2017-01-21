@@ -53,7 +53,7 @@ extents = Vector2( 65.4238, 20.7729 )
 transform/pos = Vector2( 120, 0 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
+frame = 26
 playing = true
 script/script = ExtResource( 32 )
 
@@ -114,8 +114,8 @@ rect = Rect2( -150, 0, 320, 20 )
 
 [node name="Rock" parent="." instance=ExtResource( 33 )]
 
-transform/pos = Vector2( -44.36, 20.3863 )
-z/z = 5
+transform/pos = Vector2( 0.133675, 31.273 )
+z/z = 1
 
 [node name="Particles2D" type="Particles2D" parent="."]
 
