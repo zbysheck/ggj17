@@ -9,4 +9,4 @@ func _ready():
 
 func _input(event):
 	if(event.is_action_pressed("SURF") && !event.is_echo()):
-		get_tree().change_scene("res://Game/Screens/GameInstruction.tscn")
+		get_node("/root/GameState").changeToGameScreen()
