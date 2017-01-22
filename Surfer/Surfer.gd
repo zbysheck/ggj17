@@ -4,7 +4,7 @@ var CurrentDirectionVector
 onready var initial_pos = get_pos()
 var Waves = 0;
 var speed = 0;
-var baseMaxSpeed = 90;
+var baseMaxSpeed = 190;
 var maxSpeed = 0;
 var prevX;
 
@@ -25,7 +25,7 @@ func _process(delta):
 	pasekTurbo.set_value(Turbo)
 	maxSpeed = baseMaxSpeed + Turbo
 	var minimalSpeed = 40
-	var speedup = 0.001
+	var speedup = 0.0005
 	if(isOnWave() && !Input.is_action_pressed("SURF")):
 		speed += speedup
 	if(isOnWave() && Input.is_action_pressed("SURF")):
