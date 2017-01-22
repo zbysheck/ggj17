@@ -1,20 +1,19 @@
-[gd_scene load_steps=18 format=1]
+[gd_scene load_steps=17 format=1]
 
 [ext_resource path="res://Surfer/Surfer.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Surfer/Surfer.png" type="Texture" id=2]
-[ext_resource path="res://Surfer/45-up2.png" type="Texture" id=3]
-[ext_resource path="res://Surfer/fast-forward.png" type="Texture" id=4]
-[ext_resource path="res://Surfer/45-down3.png" type="Texture" id=5]
-[ext_resource path="res://Surfer/90-down.png" type="Texture" id=6]
-[ext_resource path="res://Surfer/90-down2.png" type="Texture" id=7]
-[ext_resource path="res://Surfer/45-down2.png" type="Texture" id=8]
-[ext_resource path="res://Surfer/45-down.png" type="Texture" id=9]
-[ext_resource path="res://Surfer/45-up.png" type="Texture" id=10]
-[ext_resource path="res://Surfer/45-up3.png" type="Texture" id=11]
+[ext_resource path="res://Surfer/45-up2.png" type="Texture" id=2]
+[ext_resource path="res://Surfer/fast-forward.png" type="Texture" id=3]
+[ext_resource path="res://Surfer/45-down3.png" type="Texture" id=4]
+[ext_resource path="res://Surfer/90-down.png" type="Texture" id=5]
+[ext_resource path="res://Surfer/45-down2.png" type="Texture" id=6]
+[ext_resource path="res://Surfer/45-down.png" type="Texture" id=7]
+[ext_resource path="res://Surfer/90-down2.png" type="Texture" id=8]
+[ext_resource path="res://Surfer/45-up.png" type="Texture" id=9]
+[ext_resource path="res://Surfer/tilt-back.png" type="Texture" id=10]
+[ext_resource path="res://Surfer/epic-jump.png" type="Texture" id=11]
 [ext_resource path="res://Surfer/medium-forward.png" type="Texture" id=12]
 [ext_resource path="res://Surfer/slow-forward.png" type="Texture" id=13]
-[ext_resource path="res://Surfer/tilt-back.png" type="Texture" id=14]
-[ext_resource path="res://Surfer/epic-jump.png" type="Texture" id=15]
+[ext_resource path="res://Surfer/45-up3.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -23,7 +22,7 @@ extents = Vector2( 11.7728, 10.5298 )
 
 [sub_resource type="SpriteFrames" id=2]
 
-animations = [ { "frames":[ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ], "loop":true, "name":"Peek", "speed":3.0 }, { "frames":[ ExtResource( 6 ) ], "loop":true, "name":"90-up", "speed":5.0 }, { "frames":[ ExtResource( 7 ) ], "loop":false, "name":"90-down", "speed":5.0 }, { "frames":[ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 9 ) ], "loop":true, "name":"45-down", "speed":5.0 }, { "frames":[ ExtResource( 10 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 3 ) ], "loop":true, "name":"45-up", "speed":5.0 }, { "frames":[ ExtResource( 12 ), ExtResource( 4 ), ExtResource( 13 ) ], "loop":true, "name":"forward", "speed":5.0 }, { "frames":[ ExtResource( 10 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 9 ), ExtResource( 7 ) ], "loop":true, "name":"jump", "speed":5.0 } ]
+animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ], "loop":true, "name":"Peek", "speed":3.0 }, { "frames":[ ExtResource( 5 ) ], "loop":true, "name":"90-up", "speed":5.0 }, { "frames":[ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 7 ) ], "loop":true, "name":"45-down", "speed":5.0 }, { "frames":[ ExtResource( 8 ) ], "loop":false, "name":"90-down", "speed":5.0 }, { "frames":[ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 8 ) ], "loop":true, "name":"jump", "speed":5.0 }, { "frames":[ ExtResource( 12 ), ExtResource( 3 ), ExtResource( 13 ) ], "loop":true, "name":"forward", "speed":5.0 }, { "frames":[ ExtResource( 9 ), ExtResource( 2 ), ExtResource( 14 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 2 ) ], "loop":true, "name":"45-up", "speed":5.0 } ]
 
 [node name="Surfer" type="RigidBody2D"]
 
@@ -49,21 +48,19 @@ velocity/angular = 0.0
 damp_override/linear = -1.0
 damp_override/angular = -1.0
 script/script = ExtResource( 1 )
-maxSpeed = 25
 
-[node name="Particles2D" type="Particles2D" parent="."]
+[node name="surfingwave" type="Particles2D" parent="."]
 
-visibility/visible = false
-transform/pos = Vector2( -4.12948, 6.21461 )
-config/amount = 320
-config/lifetime = 0.900853
-config/time_scale = 0.5
+transform/pos = Vector2( 3.5599, 7.49617 )
+config/amount = 64
+config/lifetime = 1.4
+config/time_scale = 1.52609
 config/preprocess = 0.1
 config/h_frames = 3
 params/direction = 275.0
-params/spread = 108.0
-params/linear_velocity = 20.0
-params/spin_velocity = 10.0
+params/spread = 5.0
+params/linear_velocity = 15.0
+params/spin_velocity = 0.0
 params/orbit_velocity = 0.0
 params/gravity_direction = 0.0
 params/gravity_strength = 0.0
@@ -76,11 +73,6 @@ params/final_size = 1.0
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
-
-[node name="Sprite" type="Sprite" parent="."]
-
-visibility/visible = false
-texture = ExtResource( 2 )
 
 [node name="Movement" type="AnimatedSprite" parent="."]
 
