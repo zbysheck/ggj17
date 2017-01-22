@@ -1,4 +1,4 @@
-[gd_scene load_steps=133 format=1]
+[gd_scene load_steps=132 format=1]
 
 [ext_resource path="res://Game/Screens/TitleScreen.gd" type="Script" id=1]
 [ext_resource path="res://Assets/titlescreen/NEW_TITLE_00000.png" type="Texture" id=2]
@@ -127,8 +127,7 @@
 [ext_resource path="res://Assets/titlescreen/NEW_TITLE_00123.png" type="Texture" id=125]
 [ext_resource path="res://Assets/titlescreen/NEW_TITLE_00124.png" type="Texture" id=126]
 [ext_resource path="res://Assets/titlescreen/NEW_TITLE_00125.png" type="Texture" id=127]
-[ext_resource path="res://assets/TV_Themes_-_Baywatch.wav" type="Sample" id=128]
-[ext_resource path="res://assets/menu.wav" type="Sample" id=129]
+[ext_resource path="res://assets/menu.wav" type="Sample" id=128]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -136,8 +135,8 @@ animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 )
 
 [sub_resource type="SampleLibrary" id=2]
 
-samples/TV_Themes_-_Baywatch = { "db":0.0, "pitch":1.0, "sample":ExtResource( 128 ) }
-samples/menu = { "db":0.0, "pitch":1.0, "sample":ExtResource( 129 ) }
+samples/TV_Themes_-_Baywatch = { "db":0.0, "pitch":1.0, "sample":null }
+samples/menu = { "db":0.0, "pitch":1.0, "sample":ExtResource( 128 ) }
 
 [sub_resource type="GDScript" id=3]
 
@@ -152,11 +151,7 @@ script/script = ExtResource( 1 )
 transform/pos = Vector2( 160, 120 )
 frames = SubResource( 1 )
 animation = "New Anim"
-<<<<<<< HEAD
-frame = 87
-=======
-frame = 12
->>>>>>> origin/master
+frame = 59
 playing = true
 
 [node name="baywatchSample" type="SamplePlayer" parent="."]
