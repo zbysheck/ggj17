@@ -12,7 +12,7 @@ var isOnTheWave = false;
 
 onready var pasekTurbo = get_node("Camera2D/CanvasLayer/ProgressBar")
 var Turbo = 0;
-var TurboDecay = 1;
+var TurboDecay = 0.5;
 
 func _ready():
 	get_node("/root/GameState").surfer = self;

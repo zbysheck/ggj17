@@ -40,7 +40,7 @@ animations = [ { "frames":[ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 )
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 60.0651, 60.7683 )
+extents = Vector2( 60.0651, 57.3482 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -52,7 +52,7 @@ extents = Vector2( 65.4238, 20.7729 )
 transform/pos = Vector2( 120, 0 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 3
+frame = 19
 playing = true
 script/script = ExtResource( 32 )
 
@@ -60,7 +60,7 @@ script/script = ExtResource( 32 )
 
 input/pickable = true
 shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -6.91299 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -0.291992, 5.64253 )
 shapes/0/trigger = false
 gravity_point = true
 gravity_vec = Vector2( 0, 1 )
@@ -70,7 +70,8 @@ angular_damp = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WaveArea"]
 
-transform/pos = Vector2( 0, -6.91299 )
+transform/pos = Vector2( -0.291992, 5.64253 )
+transform/scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
@@ -80,7 +81,7 @@ _update_shape_index = 0
 transform/pos = Vector2( 0, 99.5131 )
 input/pickable = true
 shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 1.20541, -41.3577 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -0.546478, -32.0141 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -91,7 +92,7 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UnderWaveArea"]
 
-transform/pos = Vector2( 1.20541, -41.3577 )
+transform/pos = Vector2( -0.546478, -32.0141 )
 shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
@@ -267,7 +268,7 @@ params/anim_initial_pos = 0.0
 
 [node name="Particles2D7" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 21.8992, -47.8861 )
+transform/pos = Vector2( 21.8992, -45.8422 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0
@@ -289,7 +290,7 @@ params/anim_initial_pos = 0.0
 
 [node name="Particles2D8" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 36.7906, -48.4701 )
+transform/pos = Vector2( 41.4624, -45.8422 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0
@@ -311,7 +312,7 @@ params/anim_initial_pos = 0.0
 
 [node name="Particles2D9" type="Particles2D" parent="."]
 
-transform/pos = Vector2( 49.9301, -47.5942 )
+transform/pos = Vector2( 49.9301, -46.4262 )
 config/amount = 64
 config/lifetime = 1.4
 params/direction = 270.0
