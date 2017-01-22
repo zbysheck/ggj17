@@ -24,12 +24,13 @@ func _process(delta):
 		Turbo = 0
 	pasekTurbo.set_value(Turbo)
 	maxSpeed = baseMaxSpeed + Turbo
-	
+	var minimalSpeed = 40
+	var speedup = 0.001
 	if(isOnWave() && !Input.is_action_pressed("SURF")):
-		speed += 0.01
+		speed += speedup
 	if(isOnWave() && Input.is_action_pressed("SURF")):
-		speed -= 0.009
-		CurrentDirectionVector = Vector2(speed, -4)
+		speed -= speedup/2
+		CurrentDirectionVector = Vector2(speed, -5)
 	else:
 		CurrentDirectionVector = Vector2(speed, 2)
 	if(isOnWave()):
@@ -41,13 +42,13 @@ func _process(delta):
 	var velocity_y = get_linear_velocity().y
 	if(velocity > maxSpeed):
 		set_linear_velocity(Vector2(maxSpeed, get_linear_velocity().y))
-	if(velocity < 20):
-		set_linear_velocity(Vector2(20, get_linear_velocity().y))
+	if(velocity < minimalSpeed):
+		set_linear_velocity(Vector2(minimalSpeed, get_linear_velocity().y))
 	if(velocity_y > 250):
 		set_linear_velocity(Vector2(velocity, 250))
 	if(isOnWave() && velocity_y > 60):
 		set_linear_velocity(Vector2(velocity, 60))
-	
+	print (velocity)
 	var P1 = get_node("Movement")
 	var P1position = P1.get_global_pos()
 	
