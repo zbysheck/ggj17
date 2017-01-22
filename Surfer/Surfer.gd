@@ -24,7 +24,7 @@ func _process(delta):
 		Turbo = 0
 	pasekTurbo.set_value(Turbo)
 	maxSpeed = baseMaxSpeed + Turbo
-	print(str(maxSpeed))
+	
 	if(isOnWave() && !Input.is_action_pressed("SURF")):
 		speed += 0.01
 	if(isOnWave() && Input.is_action_pressed("SURF")):
