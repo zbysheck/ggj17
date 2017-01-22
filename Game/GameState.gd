@@ -9,6 +9,8 @@ var surfer;
 
 func rockHit():
 	get_tree().change_scene("res://Game/Screens/GameOver.tscn")
+func SharkHit():
+	get_tree().change_scene("res://Game/Screens/SharkOver.tscn")
 func changeToMainScreen():
 	get_tree().change_scene("res://Game/Screens/TitleScreen.tscn")
 	resetPoints()
