@@ -5,5 +5,5 @@ extends Label
 # var b = "textvar"
 	
 func _ready():
-	var points = get_node("/root/GameState").points
+	var points = get_node("/Pickup").Teqpoints
 	set_text("Points: " + str(int(points)))

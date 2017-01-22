@@ -141,7 +141,7 @@ script/script = ExtResource( 1 )
 transform/pos = Vector2( 160, 120 )
 frames = SubResource( 1 )
 animation = "New Anim"
-frame = 68
+frame = 64
 playing = true
 
 

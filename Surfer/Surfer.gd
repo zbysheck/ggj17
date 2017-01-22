@@ -24,7 +24,7 @@ func _process(delta):
 		Turbo = 0
 	pasekTurbo.set_value(Turbo)
 	maxSpeed = baseMaxSpeed + Turbo
-	print(str(maxSpeed))
+	
 	if(isOnWave() && !Input.is_action_pressed("SURF")):
 		speed += 0.01
 	if(isOnWave() && Input.is_action_pressed("SURF")):
@@ -52,6 +52,7 @@ func _process(delta):
 	var P1position = P1.get_global_pos()
 	
 	if (!isOnWave()):
+		get_node("surfingwave").set_z(-1)
 		if (Input.is_action_pressed("SURF")):
 				P1.play("jump")
 		elif (velocity_y < 85 && velocity_y > -85):
@@ -62,6 +63,7 @@ func _process(delta):
 			P1.play("90-up")
 		
 	elif (isOnWave()):
+		get_node("surfingwave").set_z(0)
 		if (-30 < velocity_y && velocity_y < 30):
 			P1.play("forward")
 		elif (velocity_y > 30):	
