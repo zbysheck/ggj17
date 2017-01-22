@@ -5,5 +5,5 @@ extends Label
 # var b = "textvar"
 	
 func _ready():
-	set_process(true)
-
+	var points = get_node("/root/GameState").points
+	set_text("Points: " + str(int(points)))

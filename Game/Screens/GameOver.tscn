@@ -22,7 +22,7 @@ animation = "default"
 [node name="AnimatedSprite" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 166.072, 207.414 )
-frame = 20
+frame = 60
 
 [node name="Hud" type="Control" parent="."]
 
