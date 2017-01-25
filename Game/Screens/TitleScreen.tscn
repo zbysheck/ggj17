@@ -151,7 +151,7 @@ script/script = ExtResource( 1 )
 transform/pos = Vector2( 160, 120 )
 frames = SubResource( 1 )
 animation = "New Anim"
-frame = 59
+frame = 51
 playing = true
 
 [node name="baywatchSample" type="SamplePlayer" parent="."]
