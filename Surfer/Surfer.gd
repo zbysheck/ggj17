@@ -96,4 +96,6 @@ func updatePoints(delta):
 		prevX = get_pos().x
 	else:
 		var points = delta * get_linear_velocity().x * 1/10
+		var Teqpoints = delta * get_linear_velocity().x * 1/10
 		get_node("/root/GameState").addPoints(points)
+		get_node("/root/GameState").addPoints(Teqpoints)

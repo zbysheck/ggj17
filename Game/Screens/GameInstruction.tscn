@@ -1,11 +1,21 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://Game/Screens/GameInstruction.gd" type="Script" id=1]
-[ext_resource path="res://Assets/titlescreen/NEW_TITLE_00000.png" type="Texture" id=2]
+[ext_resource path="res://Assets/BackGround/info/LEGENDA_00000.png" type="Texture" id=2]
+[ext_resource path="res://Assets/BackGround/info/LEGENDA_00001.png" type="Texture" id=3]
+[ext_resource path="res://Assets/BackGround/info/LEGENDA_00002.png" type="Texture" id=4]
+[ext_resource path="res://Assets/BackGround/info/LEGENDA_00003.png" type="Texture" id=5]
+[ext_resource path="res://Assets/BackGround/info/LEGENDA_00004.png" type="Texture" id=6]
+[ext_resource path="res://Assets/BackGround/info/LEGENDA_00005.png" type="Texture" id=7]
+[ext_resource path="res://Assets/BackGround/info/LEGENDA_00006.png" type="Texture" id=8]
+[ext_resource path="res://Assets/BackGround/info/LEGENDA_00007.png" type="Texture" id=9]
+[ext_resource path="res://Assets/BackGround/info/LEGENDA_00008.png" type="Texture" id=10]
+[ext_resource path="res://Assets/BackGround/info/LEGENDA_00009.png" type="Texture" id=11]
+[ext_resource path="res://Assets/BackGround/info/LEGENDA_00010.png" type="Texture" id=12]
 
 [sub_resource type="SpriteFrames" id=1]
 
-animations = [ { "frames":[ ExtResource( 2 ) ], "loop":true, "name":"default", "speed":5.0 } ]
+animations = [ { "frames":[ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ], "loop":true, "name":"default", "speed":25.0 } ]
 
 [node name="Node2D" type="Node2D"]
 
@@ -16,5 +26,7 @@ script/script = ExtResource( 1 )
 transform/pos = Vector2( 160, 121 )
 frames = SubResource( 1 )
 animation = "default"
+frame = 3
+playing = true
 
 
